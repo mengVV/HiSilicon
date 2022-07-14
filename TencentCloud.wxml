@@ -1,0 +1,49 @@
+<view style="display:flex; flex-direction:column; align-items:center;">
+  <image style="width:200px; height:60px;" src="../../image/HiSpark.png" mode="cover"></image>
+</view>
+
+<view class="body">
+  <view style="font-weight: bold;">
+    产品简介
+  </view>
+  <text>\n</text>
+  <view class="box">
+    <view class="cell">
+      <view class="status-left">产品名称</view>
+      <view class="status-right">婴儿状态检测系统</view>
+    </view>
+    <view class="cell">
+      <view class="status-left">制作团队</view>
+      <view class="status-right">睡熊猛醒队</view>
+    </view>
+  </view>
+
+  <text>\n</text>
+
+  <form bindsubmit="">
+    <view style="display:flex; flex-direction:row; justify-content: space-between;">
+      <view style="font-weight: bold;">
+        获取宝宝状态
+      </view>
+      <view>
+        <button type="primary" size="mini" bindtap="update">获取</button>
+      </view>
+    </view>
+    <view class="box">
+      <view class="cell">
+        <view>省流模式</view><!--111-->
+        <view>
+          <switch name="light" data-item="light" checked="{{stateReported.light}}" bindchange="switchChange"/>
+        </view>
+      </view>
+      <view class="cell">
+      </view>
+      <view class="cell">
+        <view class="left">婴儿状态</view>
+        <view class="right">
+          {{stateReported.temperature}}
+        </view>
+      </view>
+    </view>
+  </form>
+</view>
